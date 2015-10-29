@@ -1,0 +1,24 @@
+header {
+	padding: 2em 1em;
+	margin: 0 auto;
+	text-align: left;
+	width: 100%;
+	max-width: 60em;
+
+	p {
+		font-size: px-to-ems(21px);
+		padding-top: 0;
+		margin: .5em auto 0 auto;
+		color: $dark-gray;
+		font-style: italic;
+	}
+	h1 {
+		font-size: 3em;
+		margin: 0 auto;
+		line-height: .9em;
+
+		img {
+			width: 100%;
+		}
+	}
+}

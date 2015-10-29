@@ -10,6 +10,7 @@ body {
 	min-height: 100vh;
 	@include flexbox;
 	@include flex-direction(column);
+	border-top: 1em solid $black;
 }
 a{
 	color: $blue;
