@@ -1,0 +1,31 @@
+html {
+	box-sizing: border-box;
+	font-family: Georgia, "Times New Roman", serif;
+}
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+body {
+	color: $black;
+	min-height: 100vh;
+	@include flexbox;
+	@include flex-direction(column);
+}
+a{
+	color: $blue;
+	@include transition(all .3s ease-in-out);
+
+	&:hover, &:focus, &:active{
+		color: darken($blue, 15);
+	}
+}
+#wrap{
+	display: table;
+	width: 100%;
+	@include flex(1);
+
+}
+
+p {
+	line-height: 1.3em;
+}

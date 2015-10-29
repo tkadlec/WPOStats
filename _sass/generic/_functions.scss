@@ -1,0 +1,7 @@
+//	Functions
+// 	==========================================================================
+
+// convert px to ems
+@function px-to-ems( $pixels, $context: 16px ) {
+	@return #{$pixels/$context}em;
+}
