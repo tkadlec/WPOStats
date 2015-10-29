@@ -1,0 +1,16 @@
+.tag{
+			
+	text-decoration: none;
+	font-size: .8em;
+	padding: .3em;
+	border-radius: .3em;
+	margin-right: .2em;
+	border-bottom: 0;
+	color: #fff;
+	background: $blue;
+
+
+}
+.tag:hover{
+		background: darken($blue, 15)
+}

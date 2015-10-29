@@ -6,4 +6,7 @@ img:
  alt: "Bing Logo"
 date:   2015-10-29 14:27:51
 categories:
+tags:
+ - revenue
+ - search
 ---
