@@ -24,9 +24,25 @@ a{
 	display: table;
 	width: 100%;
 	@include flex(1);
+	max-width: 60em;
+	margin: auto;
+	overflow: hidden;
+	padding: 1em;
 
 }
-
+[role=main]{
+	width: 70%;
+	padding: 1em 0;
+	float: left;
+}
 p {
 	line-height: 1.3em;
 }
+
+	h1, h3{
+		font-weight: normal;
+	}
+	a{
+		text-decoration: none;
+		color: #2C8DC9;
+	}
