@@ -18,7 +18,7 @@
 		margin-bottom: 1em;
 		display: block;
 		text-align: center;
-		@media only all and (min-width: $bp-small) {
+		@media only all and (min-width: $bp-xxsmall) {
 			float: left;
 			margin-right: 1em;
 			max-width: px-to-ems(100px);
@@ -29,7 +29,8 @@
 			margin: auto;
 			display: inline-block;
 			border: 5px solid rgba(255,255,255,.4);
-			@media only all and (min-width: $bp-small) {
+			max-width: 100%;
+			@media only all and (min-width: $bp-xxsmall) {
 				display: block;
 				max-width: 100%;
 				width: 100%;

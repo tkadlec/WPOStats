@@ -30,9 +30,12 @@ a{
 
 }
 [role=main]{
-	width: 70%;
 	padding: 1em 0;
-	float: left;
+	@media screen and (min-width: $bp-small) {
+		float: left;
+		width: 70%;
+
+	}
 }
 p {
 	line-height: 1.3em;
