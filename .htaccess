@@ -1,0 +1,9 @@
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript text/javascript 	application/javascript image/svg+xml
+ExpiresActive On
+ExpiresByType text/css "access plus 3 days"
+ExpiresByType application/x-javascript "access plus 3 days"
+ExpiresByType image/gif "access plus 3 days"
+ExpiresByType image/png "access plus 3 days"
+ExpiresByType image/jpeg "access plus 3 days"
+ExpiresByType text/javascript "access plus 3 days"
+ExpiresByType application/javascript "access plus 3 days"
