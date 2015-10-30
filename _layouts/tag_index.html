@@ -3,8 +3,12 @@ layout: default
 ---
 
   <section role="main">
-    <ul class="slats">
+<h2 class="page-title">{{page.title}}</h2>
+
+<ul class="slats">
       {% for post in site.posts %}
+      {% for tag in post.tags %}
+      {% if tag == page.tag %}
         <li>
           {% if post.img %}
           {{#img}}
@@ -23,10 +27,11 @@ layout: default
             {% endfor %}
           </span>
         </li>
-      {% endfor %}
-    </ul>
-  </section>
-  <nav role="complimentary">
-    {% include tagbar.html %}
-  </nav>
-</div>
+      {% endif %}
+	{% endfor %}
+	{% endfor %}	
+</ul>
+</section>
+<nav role="complimentary">
+{% include tagbar.html %}
+</nav>

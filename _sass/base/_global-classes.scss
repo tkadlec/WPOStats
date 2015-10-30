@@ -1,9 +1,10 @@
 .lc{
-	max-width: px-to-ems(1200px);
+	max-width: 60em;
 	margin: auto;
 	overflow: hidden;
 	width: 100%;
 	text-align: left;
+	padding: 1em;
 }
 img.flr{
 	margin: auto;
@@ -15,4 +16,11 @@ img.flr{
 		float: right;
 	}
 	
+}
+.page-title{
+	font-size: 1.9em;
+	font-weight: normal;
+	margin-bottom: 1.5em;
+	border-bottom: 5px solid $blue;
+	padding-bottom: .2em;
 }

@@ -21,7 +21,6 @@ a{
 	}
 }
 #wrap{
-	display: table;
 	width: 100%;
 	@include flex(1);
 	max-width: 60em;

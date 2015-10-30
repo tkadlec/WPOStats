@@ -9,16 +9,18 @@ header {
 		font-size: px-to-ems(21px);
 		padding-top: 0;
 		margin: .5em auto 0 auto;
-		color: $dark-gray;
+		color: lighten($dark-gray, 20);
 		font-style: italic;
 	}
 	h1 {
-		font-size: 3em;
-		margin: 0 auto;
+		font-size: 1em;
+		margin: 0;
 		line-height: .9em;
-
 		img {
 			width: 100%;
+			max-width: 100%;
+			border: 0;
+			margin-bottom: -.8em;
 		}
 	}
 }
