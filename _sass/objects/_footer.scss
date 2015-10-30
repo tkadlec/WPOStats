@@ -25,10 +25,10 @@ footer{
 		@media screen and (min-width: $bp-small) {
 			width: 50%;
 			&:nth-child(odd) {
-				padding-right: .5em;
+				padding-right: .75em;
 			}
 			&:nth-child(even) {
-				padding-left: .5em;
+				padding-left: .75em;
 			}
 		}
 		

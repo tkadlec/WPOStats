@@ -4,6 +4,7 @@ title:  "Google finds a 500ms increase in page load results in 25% less searches
 img:
  image: "google-logo.png"
  alt: "Google Logo"
+storySource: "http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html"
 date:   2015-10-29 14:27:51
 categories:
 tags:
