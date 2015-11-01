@@ -1,10 +1,6 @@
 /* basic styling for image + text pattern */
 .mo{
 	margin: .5em 0;
-	// @include breakpoint($bp-large) {
-	// 	margin: 1em 0;
-	// }
-
 	&, .bd {
 		overflow: hidden;
 		_overflow: visible;
@@ -40,11 +36,5 @@
 		span{
 			display: block;
 		}
-	}
-	.pullExt {
-		// @include breakpoint($bp-small-2) {
-		// 	float: right;
-		// 	margin-left: 1em;
-		// }
 	}
 }
