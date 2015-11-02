@@ -22,7 +22,6 @@ a{
 }
 #wrap{
 	width: 100%;
-	@include flex(1);
 	max-width: 60em;
 	margin: auto;
 	overflow: hidden;
@@ -41,10 +40,10 @@ p {
 	line-height: 1.3em;
 }
 
-	h1, h3{
-		font-weight: normal;
-	}
-	a{
-		text-decoration: none;
-		color: #2C8DC9;
-	}
+h1, h3{
+	font-weight: normal;
+}
+a{
+	text-decoration: none;
+	color: #2C8DC9;
+}
