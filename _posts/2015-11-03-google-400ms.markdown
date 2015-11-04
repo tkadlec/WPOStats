@@ -6,7 +6,6 @@ img:
  alt: "Google Logo"
 storySource: "http://googleresearch.blogspot.com/2009/06/speed-matters.html"
 date:   2015-11-03 14:27:51
-categories:
 tags:
  - search
  - engagement

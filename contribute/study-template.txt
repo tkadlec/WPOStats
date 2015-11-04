@@ -1,0 +1,14 @@
+## Key Takeaway
+
+Describe the key takeaway of the study in a sentence or two. If there are more takeaways, feel free to make multiple issues.
+
+## Story Source
+
+http://canonical-source.com
+
+## Tags
+
+- list
+- of
+- appropriate
+- tags
