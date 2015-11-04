@@ -1,0 +1,10 @@
+.pagination {
+	font-size: 1.1em;
+	a, .current {
+		padding: .2em;
+		margin: 0 .3em;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
