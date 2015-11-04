@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Google reported that users who experienced a 400ms delay performed 0.44% fewer searches during the first three weeks and 0.76% fewer searches during the second three weeks."
+img:
+ image: "google-logo.png"
+ alt: "Google Logo"
+storySource: "http://googleresearch.blogspot.com/2009/06/speed-matters.html"
+date:   2015-11-03 14:27:51
+categories:
+tags:
+ - search
+ - engagement
+---
