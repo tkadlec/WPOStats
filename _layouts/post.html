@@ -4,9 +4,9 @@ layout: default
 <section role="main">
   <ul class="slats">
 <li>
-          {% if post.img %}
+          {% if page.img %}
           {{#img}}
-            <img src="/img/{{post.img.image}}" alt="{{post.img.alt}}" />
+            <img src="/img/{{page.img.image}}" alt="{{page.img.alt}}" />
 
           {{/img}}
           {% else %}
