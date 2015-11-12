@@ -24,6 +24,24 @@
 		@media screen and (min-width: $bp-xsmall) {
 			padding-left: 4em;
 		}
+		small{
+			font-size: .5em;
+			text-transform: uppercase;
+			display: block;
+			text-align: right;
+
+			a {
+				color: #999;
+				padding: .5em 0 .3em 0;
+				display: inline-block;
+				&:hover{
+					text-decoration: underline;
+					color:  darken(#999, 15);
+					@include transition(none .3s ease-in-out);
+				}
+			}
+			
+		}
 	}
 	a{
 		line-height: 1.4em;
