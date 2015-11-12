@@ -6,3 +6,5 @@ To make sure WPO Stats never goes stale and becomes a comprehensive resouce, any
 2. Apply the "study" label to the issue.
 3. Wait for us to take the issue and add it to the list of studies.
 4. Celebrate in the way you choose fit (preferrably with cake involved).
+
+The only request we have is that all studies submitted be available online in some format (video, slide deck, blog post, etc). This way people who may want to reference any of these studies can point to the source when doing so.
