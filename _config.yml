@@ -13,4 +13,6 @@ markdown: kramdown
 sass:
     sass_dir: _sass
     style: :compressed
-exclude: ["contribute"]
+exclude: ["contribute","Gemfile"]
+gems:
+  - jekyll-feed
