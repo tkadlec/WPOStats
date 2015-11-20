@@ -8,4 +8,5 @@ storySource: "http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fund
 date:   2015-11-04 13:27:51
 tags:
  - conversions
+ - "2012"
 ---
