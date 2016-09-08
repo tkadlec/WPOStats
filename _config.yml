@@ -16,3 +16,4 @@ sass:
 exclude: ["contribute","Gemfile"]
 gems:
   - jekyll-feed
+  - jekyll-paginate
