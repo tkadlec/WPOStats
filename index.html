@@ -7,9 +7,7 @@ layout: default
       {% for post in paginator.posts %}
         <li>
           {% if post.img %}
-          {{#img}}
             <img src="/img/{{post.img.image}}" alt="{{post.img.alt}}" />
-          {{/img}}
           {% else %}
           <img src="/img/generic.png" alt="WPO Stats Icon" />
           {% endif %}

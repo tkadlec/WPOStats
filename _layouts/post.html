@@ -5,12 +5,9 @@ layout: default
   <ul class="slats">
 <li>
           {% if page.img %}
-          {{#img}}
             <img src="/img/{{page.img.image}}" alt="{{page.img.alt}}" />
-
-          {{/img}}
           {% else %}
-          <img src="/img/generic.png" alt="WPO Stats Icon" />
+            <img src="/img/generic.png" alt="WPO Stats Icon" />
           {% endif %}
           <h3>
             <a href="{{ page.storySource }}">{{ page.title }}</a>
@@ -24,6 +21,5 @@ layout: default
   </ul>
 </section>
 <nav role="complimentary">
-    {% include tagbar.html %}
     {% include rssbar.html %}
 </nav>
