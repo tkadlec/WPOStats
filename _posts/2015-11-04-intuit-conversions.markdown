@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "While reducing page load from 15 seconds to 2 seconds, Intuit saw a 3% improvement in conversions for every second reduced over 7%, and a 2% improvement in conversions for every second reduced over 5 seconds. "
+title:  "While reducing page load from 15 seconds to 2 seconds, Intuit saw a 3% improvement in conversions for every second reduced over 7 seconds, and a 2% improvement in conversions for every second reduced over 5 seconds. "
 img:
  image: "intuit-logo.png"
  alt: "Intuit Logo"
