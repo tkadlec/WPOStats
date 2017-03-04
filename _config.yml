@@ -2,7 +2,7 @@
 title: WPO Stats
 email: tim@timkadlec.com
 description: > # this means to ignore newlines until "baseurl:"
-  WPO Stats: A collection of case studies and experiements demonstrating the impact of web performance.
+  WPO Stats: A collection of case studies and experiments demonstrating the impact of web performance.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://wpostats.com" # the base hostname & protocol for your site
 twitter_username: wpostats
