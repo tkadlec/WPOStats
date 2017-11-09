@@ -7,6 +7,6 @@ img:
 storySource: "http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/"
 date:   2015-11-04 13:27:51
 tags:
- - conversions
+ - conversion
  - "2012"
 ---
