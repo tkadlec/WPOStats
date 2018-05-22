@@ -31,12 +31,12 @@
 			text-align: right;
 
 			a {
-				color: #999;
+				color: #595757;
 				padding: .5em 0 .3em 0;
 				display: inline-block;
 				&:hover{
 					text-decoration: underline;
-					color:  darken(#999, 15);
+					color:  darken(#595757, 15);
 					@include transition(none .3s ease-in-out);
 				}
 			}
