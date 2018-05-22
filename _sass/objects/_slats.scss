@@ -19,8 +19,9 @@
 			margin-right: .5em;
 		}
 	}
-	h3{
+	p{
 		margin-bottom: .5em;
+		font-size: 1.17em;
 		@media screen and (min-width: $bp-xsmall) {
 			padding-left: 4em;
 		}
@@ -46,7 +47,7 @@
 	a{
 		line-height: 1.4em;
 	}
-	h3 a:hover{
+	p a:hover{
 		border-bottom: darken($blue, 15);
 		color: darken($blue, 15);
 	}

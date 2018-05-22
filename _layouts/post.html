@@ -9,9 +9,9 @@ layout: default
           {% else %}
             <img src="/img/generic.png" alt="WPO Stats Icon" />
           {% endif %}
-          <h3>
+          <p>
             <a href="{{ page.storySource }}">{{ page.title }}</a>
-          </h3>
+          </p>
           <span class="tags">
             {% for tag in page.tags %}
               <a class="tag" href="/tags/{{tag}}">#{{tag}}</a> 
