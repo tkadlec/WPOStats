@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tokopedia reduced page load from 14s to 2s for 3G connections and saw a 19% increase in visitors, 35% increase in total sessions, 7% increase in new users, 17% increase in active users and 16% increase in sessions per user."
+title:  "Tokopedia reduced render time from 14s to 2s for 3G connections and saw a 19% increase in visitors, 35% increase in total sessions, 7% increase in new users, 17% increase in active users and 16% increase in sessions per user."
 storySource: "http://tech.tokopedia.com/blog/how-tokopedia-gained-new-users-with-faster-loading-speed/"
 img:
  image: "tokopedia-logo.png"
