@@ -5,7 +5,7 @@ storySource: "http://tech.tokopedia.com/blog/how-tokopedia-gained-new-users-with
 img:
  image: "tokopedia-logo.png"
  alt: "Tokopedia Logo"
-date:   2018-04-17 06:50:51
+date:   2018-05-30 06:50:51
 tags:
  - sessions
  - reach
