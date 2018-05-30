@@ -11,6 +11,9 @@ layout: default
           {% endif %}
           <p>
             <a href="{{ page.storySource }}">{{ page.title }}</a>
+            <small>
+                <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{page.url | cgi_escape}}">Share on Twitter</a>
+              </small>
           </p>
           <span class="tags">
             {% for tag in page.tags %}
