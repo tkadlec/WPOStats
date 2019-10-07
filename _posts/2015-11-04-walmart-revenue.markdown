@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Walmart saw up to a 2% increase in conversions for every 1 second of improvement in load time. Every 100ms improvment also resulted in up to a 1% increase in revenue."
+title:  "Walmart saw up to a 2% increase in conversions for every 1 second of improvement in load time. Every 100ms improvement also resulted in up to a 1% increase in revenue."
 img:
  image: "walmart-logo.png"
  alt: "Walmart Logo"
