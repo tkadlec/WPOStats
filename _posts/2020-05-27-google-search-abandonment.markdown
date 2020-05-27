@@ -5,7 +5,7 @@ img:
  image: "google-logo.png"
  alt: "Google Logo"
 storySource: "https://webmasters.googleblog.com/2019/04/user-experience-improvements-with-page.html"
-date:   2020-01-27 05:50:51
+date:   2020-05-27 05:50:51
 tags:
  - abandonment
  - search
