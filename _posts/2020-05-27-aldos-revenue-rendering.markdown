@@ -8,5 +8,6 @@ storySource: "https://simplified.dev/performance/impact-of-web-performance"
 date:   2020-05-27 06:50:51
 tags:
  - revenue
+ - conversion
  - "2020"
 ---
