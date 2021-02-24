@@ -11,7 +11,7 @@ exports.handler = async function(event, context) {
     return {
         statusCode: '302',
         headers: {
-            Location: forms[0].data.testURL
+            Location: JSON.stringify(forms[0].data.testURL)
         }
     }
 
