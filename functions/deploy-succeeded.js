@@ -25,7 +25,10 @@ exports.handler = function(event, context) {
             //looking good, let's get our ID
             let testId = result.data.testId;
             console.log('Test ID: ' + testId);
-
+            console.log(encode({
+                "form-name": "webpagetest-test",
+                "testId": testId
+            }));
             //submit it via Netlify forms
             fetch("/", {
                 method: "POST",
