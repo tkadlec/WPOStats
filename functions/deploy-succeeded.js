@@ -43,6 +43,7 @@ exports.handler = function(event, context) {
 
                 if (err) {
                     msg = 'Posting form failed: ' + err;
+                    console.log(msg);
                 } else {
                     msg = "Posting succeeded";
                     console.log(msg);
