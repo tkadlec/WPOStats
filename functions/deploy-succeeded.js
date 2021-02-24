@@ -22,17 +22,13 @@ exports.handler = function(event, context) {
 
     wpt.runTest(URL, opts, (err, result)=> {
         if (result && result.data) {
-            //looking good, let's get our ID
-            let testId = result.data.testId;
-            console.log('Test ID: ' + testId);
-            console.log(encode({
-                "form-name": "webpagetest-test",
-                "testId": testId
-            }));
+            //looking good, let's get our test URL
+            let testURL = result.data.userUrl;
+            console.log('Test URL: ' + testURL);
             
             let payload = {
                 "form-name": "webpagetest-test",
-                "testId": testId
+                "testURL": testURL
             };
             console.log("Payload....");
             console.log(payload);
