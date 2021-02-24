@@ -14,11 +14,10 @@ exports.handler = async function(event, context) {
             console.log(json);
             return {
                 statusCode: '200',
-                body: JSON.stringify(json);
+                body: JSON.stringify(json)
             }
         })
-    });
-    
+    })
     
     // //serve redirect
     // return {
