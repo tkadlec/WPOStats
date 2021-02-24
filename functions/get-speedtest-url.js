@@ -12,7 +12,7 @@ exports.handler = async function(event, context) {
         })
         return {
             statusCode: '200',
-            body: JSON.stringify(forms);
+            body: JSON.stringify(forms)
         }
     } catch (error) {
         return { statusCode: 422, body: "RUH ROH"};
