@@ -33,21 +33,13 @@ exports.handler = async function(event, context) {
             params.append("form-name", "webpagetest-test");
             params.append("testId", testId);
 
-            const response = await fetch(URL, {
+            //submit it via Netlify forms
+            fetch(URL, {
                 method: "POST",
                 body: params
-            });
-
-            try {
-                if (response.ok) {
-                    console.log('success!');
-                } else {
-                    console.log('fail: ' + response)
-                }
-            } catch (err) {
-                console.error(error);
-            }
-            
+            })
+            .then((res) => res.text())
+            .then((text) => console.log(text));
         } else {
             
         }
