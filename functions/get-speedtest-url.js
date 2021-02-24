@@ -1,26 +1,24 @@
 const { ACCESS_TOKEN, SITE_ID } = process.env;
-const NetlifyAPI = require('netlify');
+const fetch = require('fetch');
 
 exports.handler = async function(event, context) {
     // get latest testId
-    const client = new NetlifyAPI(ACCESS_TOKEN);
-    console.log("client is in....");
-    //fetch forms
-    try {
-        const forms = await client.listSiteForms({
-            siteId: SITE_ID
-        })
-        console.log("forms....");
-        console.log(forms);
-        return {
-            statusCode: '200',
-            body: JSON.stringify(forms)
+
+    fetch(`https://api.netlify.com/api/v1/sites/${SITE_ID}/forms`, {
+        headers: {
+            "Authorization": "Bearer " + ACCESS_TOKEN
         }
-    } catch (error) {
-        console.log("error....");
-        console.log(error);
-        return { statusCode: 422, body: "RUH ROH"};
-    }
+    }).then((response) => {
+        response.json().then((json) => {
+            console.log("response....");
+            console.log(json);
+            return {
+                statusCode: '200',
+                body: JSON.stringify(json);
+            }
+        })
+    });
+    
     
     // //serve redirect
     // return {
