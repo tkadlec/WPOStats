@@ -2,6 +2,12 @@ const WebPageTest = require('webpagetest');
 const { WPT_API_KEY, COMMIT_REF, URL } = process.env;
 const fetch = require("node-fetch");
 
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 exports.handler = function(event, context) {
     const wpt = new WebPageTest('www.webpagetest.org', WPT_API_KEY);
 
