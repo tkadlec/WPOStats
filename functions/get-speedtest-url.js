@@ -8,8 +8,8 @@ exports.handler = async function(event, context) {
     console.log("client is in....");
     //fetch forms
     try {
-        const forms = await client.listSiteForms({
-            siteId: SITE_ID
+        const forms = await client.listFormSubmissions({
+            formId: '6036cdd27d632a0007c2691f'
         })
         console.log("forms....");
         console.log(forms);
