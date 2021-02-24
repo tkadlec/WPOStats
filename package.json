@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "netlify": "^6.1.9",
     "request": "^2.88.2",
     "webpagetest": "^0.4.0"
   }
