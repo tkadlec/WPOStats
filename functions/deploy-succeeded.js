@@ -8,7 +8,7 @@ function encode(data) {
         .join("&");
 }
 
-exports.handler = async function(event, context) {
+exports.handler = function(event, context) {
     const wpt = new WebPageTest('www.webpagetest.org', WPT_API_KEY);
 
     let opts = {
