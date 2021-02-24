@@ -1,6 +1,6 @@
 const WebPageTest = require('webpagetest');
 const { WPT_API_KEY, COMMIT_REF, URL } = process.env;
-const fetch = require("node-fetch");
+const request = require("request");
 
 function encode(data) {
     return Object.keys(data)
@@ -30,18 +30,24 @@ exports.handler = function(event, context) {
                 "testId": testId
             }));
             //submit it via Netlify forms
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({
-                    "form-name": "webpagetest-test",
-                    "testId": testId
-                })
-            }).then(() => ({
-                statusCode: 200,
-                body: 'success'
-            }))
-            .catch((error) => ({statusCode: 422, body: String(error)}));
+
+            let payload = {
+                "form-name": "webpagetest-test",
+                "testId": testId
+            };
+
+            console.log(payload);
+            
+            request.post({"url": "/", "formData": payload}, function (err, httpResponse, body) {
+                let msg;
+
+                if (err) {
+                    msg = 'Posting form failed: ' + err;
+                } else {
+                    msg = "Posting succeeded";
+                    console.log(msg);
+                }
+            })
         } else {
             
         }
