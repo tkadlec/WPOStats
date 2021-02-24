@@ -2,7 +2,7 @@ const WebPageTest = require('webpagetest');
 const { WPT_API_KEY, COMMIT_REF, URL } = process.env;
 const fetch = require("node-fetch");
 
-exports.handler = async function(event, context) {
+exports.handler = function(event, context) {
     const wpt = new WebPageTest('www.webpagetest.org', WPT_API_KEY);
 
     let opts = {
