@@ -38,7 +38,7 @@ exports.handler = function(event, context) {
 
             console.log(payload);
             
-            request.post({"url": "/", "formData": payload}, function (err, httpResponse, body) {
+            request.post({"url": URL, "formData": payload}, function (err, httpResponse, body) {
                 let msg;
 
                 if (err) {
