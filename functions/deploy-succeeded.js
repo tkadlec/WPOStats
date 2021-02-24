@@ -8,7 +8,7 @@ function encode(data) {
         .join("&");
 }
 
-exports.handler = function(event, context) {
+exports.handler = async function(event, context) {
     const wpt = new WebPageTest('www.webpagetest.org', WPT_API_KEY);
 
     let opts = {
@@ -29,19 +29,25 @@ exports.handler = function(event, context) {
                 "form-name": "webpagetest-test",
                 "testId": testId
             }));
-            //submit it via Netlify forms
-            fetch(URL, {
+            const params = new URLSearchParams();
+            params.append("form-name", "webpagetest-test");
+            params.append("testId", testId);
+
+            const response = await fetch(URL, {
                 method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({
-                    "form-name": "webpagetest-test",
-                    "testId": testId
-                })
-            }).then(() => ({
-                statusCode: 200,
-                body: 'success'
-            }))
-            .catch((error) => ({statusCode: 422, body: String(error)}));
+                body: params
+            });
+
+            try {
+                if (response.ok) {
+                    console.log('success!');
+                } else {
+                    console.log('fail: ' + response)
+                }
+            } catch (err) {
+                console.error(error);
+            }
+            
         } else {
             
         }
