@@ -9,7 +9,7 @@ function encode(data) {
 }
 
 exports.handler = function(event, context) {
-    const wpt = new WebPageTest('www.webpagetest.org', WPT_API_KEY);
+    const wpt = new WebPageTest('https://www.webpagetest.org', WPT_API_KEY);
 
     let opts = {
         "firstViewOnly": true,
