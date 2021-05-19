@@ -10,4 +10,5 @@ tags:
  - engagement
  - abandonment
  - "2020"
+ - core web vitals
 ---

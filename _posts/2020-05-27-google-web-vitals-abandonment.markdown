@@ -9,4 +9,5 @@ date:   2020-05-27 06:50:51
 tags:
  - abandonment
  - "2020"
+ - core web vitals
 ---

@@ -5,5 +5,6 @@ storySource: "https://web.dev/vodafone/"
 date:   2021-03-18 06:50:51
 tags:
  - sales
+ - core web vitals
  - "2021"
 ---

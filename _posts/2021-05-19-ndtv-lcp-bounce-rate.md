@@ -5,5 +5,6 @@ storySource: "https://web.dev/ndtv/"
 date:   2021-05-19 06:50:51
 tags:
  - bounce rate
+ - core web vitals
  - "2020"
 ---

@@ -9,4 +9,5 @@ tags:
  - "bounce rate"
  - "session duration"
  - "2021"
+ - core web vitals
 ---
