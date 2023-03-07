@@ -59,10 +59,5 @@
 		border-bottom: darken($blue, 15);
 		color: darken($blue, 15);
 	}
-	.tags{
-		@media screen and (min-width: $bp-xsmall) {
-			padding-left: 4.631578947em;
-		}
-		
-	}
+
 }
