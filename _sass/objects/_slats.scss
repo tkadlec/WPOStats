@@ -2,11 +2,20 @@
 	list-style-type: none;
 	padding-left: 0;
 	font-size: 1.2em;
+
 	li{
 		list-style-type: none;
 		padding-left: 0;
 		margin-left: 0;
 		margin-bottom: 2.5em;
+		
+		@media screen and (min-width: $bp-xsmall) {
+			display: grid;
+			grid-template: 1fr 3fr;
+			grid-column-gap: 1em;
+			justify-items: center;
+			align-items: start;
+		}
 	}
 	img{
 		height: 3.5em;
@@ -14,17 +23,16 @@
 		text-align: center;
 		display: block;
 		@media screen and (min-width: $bp-xsmall) {
-			float: left;
-			display: inline-block;
-			margin-right: .5em;
+			margin: 0;
+			grid-column: 1;
+			grid-row-start: 1;
+			grid-row-end: span 2;
+			margin-top: 1.5em;
 		}
 	}
 	p{
 		margin-bottom: .5em;
 		font-size: 1.17em;
-		@media screen and (min-width: $bp-xsmall) {
-			padding-left: 4em;
-		}
 		small{
 			font-size: .6em;
 			text-transform: uppercase;
