@@ -1,8 +1,0 @@
-<h2>Filter by tag:</h2>
-<ul>
-	{% assign tags = site.tags | sort %}
-
-	{% for tag in tags %}
-		<li><a class="tag" href="/tags/{{tag[0]}}">#{{tag[0]}}</a></li>
-	{% endfor %}
-</ul>
