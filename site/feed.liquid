@@ -1,0 +1,22 @@
+---
+permalink: feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>WPOStats.com</title>
+    <description>WPO Stats: A collection of case studies and experiments demonstrating the impact of web performance. </description>    
+    <link>https://wpostats.com</link>
+    <atom:link href="https://wpostats.com/feed.xml" rel="self" type="application/rss+xml" />
+    {%- assign sortedPosts = collections.posts | reverse -%}
+    {%- for post in sortedPosts limit:10 -%}
+      <item>
+        <title>{{ post.data.title | escape }}</title>
+        <description>{{ post.templateContent | escape }}</description>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <link>https://wpostats.com{{ post.url }}</link>
+        <guid isPermaLink="true">{{ metadata.url }}{{ post.url }}</guid>
+      </item>
+    {%- endfor -%}
+  </channel>
+</rss>
