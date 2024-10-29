@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'siteHead.html' %}
+<body>
+    {% include 'head.html' %}
+    <div id="wrap">
+      <div class="page-content">
+        <div class="wrapper">
+          <section role="main">
+            {{ content }}
+          </section>
+          <nav role="navigation">
+            {% include "tagbar.html" %}
+            {% include "rssbar.html" %}
+          </nav>
+        </div>
+      </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+</html> 

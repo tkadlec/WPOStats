@@ -1,49 +1,33 @@
 ---
+layout: layouts/default
 pagination:
   data: collections.tagList
   size: 1
   alias: tag
 permalink: /tags/{{ tag | slugify }}/
 ---
-{% include 'siteHead.html' %}
-<body>
-    {% include 'head.html' %}
-    <div id="wrap">
-      <div class="page-content">
-        <div class="wrapper">
-          <section role="main">
-            <h1 class="page-title">Performance studies related to "{{ tag }}"</h1>
-            <ul class="slats">
-            {% assign taggedPosts = collections[tag] %}
-            {% for post in taggedPosts reversed %}
-              <li>
-                {% if post.data.img %}
-                  <img src="/img/{{post.data.img.image}}" alt="{{post.data.img.alt}}" />
-                {% else %}
-                  <img src="/img/generic.png" alt="WPO Stats Icon" />
-                {% endif %}
-                <p>
-                  <a href="{{ post.data.storySource }}">{{ post.data.title }}</a>
-                  <small>
-                    <a href="{{ post.data.permalink }}">Permalink</a>
-                    <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ post.data.title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{ post.data.permalink | cgi_escape}}">Share on Twitter</a>
-                  </small>
-                </p>
-                <span class="tags">
-                  {% for postTag in post.data.tags %}
-                    <a class="tag" href="/tags/{{postTag}}">#{{postTag}}</a> 
-                  {% endfor %}
-                </span>
-              </li>
-            {% endfor %}
-            </ul>
-          </section>
-          <nav role="navigation">
-            {% include "tagbar.html" %}
-            {% include "rssbar.html" %}
-          </nav>
-        </div>
-      </div>
-    </div>
-    {% include "footer.html" %}
-</body> 
+<h1 class="page-title">Performance studies related to "{{ tag }}"</h1>
+<ul class="slats">
+{% assign taggedPosts = collections[tag] %}
+{% for post in taggedPosts reversed %}
+  <li>
+    {% if post.data.img %}
+      <img src="/img/{{post.data.img.image}}" alt="{{post.data.img.alt}}" />
+    {% else %}
+      <img src="/img/generic.png" alt="WPO Stats Icon" />
+    {% endif %}
+    <p>
+      <a href="{{ post.data.storySource }}">{{ post.data.title }}</a>
+      <small>
+        <a href="{{ post.data.permalink }}">Permalink</a>
+        <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ post.data.title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{ post.data.permalink | cgi_escape}}">Share on Twitter</a>
+      </small>
+    </p>
+    <span class="tags">
+      {% for postTag in post.data.tags %}
+        <a class="tag" href="/tags/{{postTag}}">#{{postTag}}</a> 
+      {% endfor %}
+    </span>
+  </li>
+{% endfor %}
+</ul> 

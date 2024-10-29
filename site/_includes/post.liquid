@@ -1,37 +1,24 @@
-{% include 'siteHead.html' %}
-<body>
-    {% include 'head.html' %}
-    <div id="wrap">
-      <div class="page-content">
-        <div class="wrapper">
-          <section role="main">
-            <ul class="slats">
-        <li>
-          {% if img %}
-            <img src="/img/{{img.image}}" alt="{img.alt}}" />
-          {% else %}
-            <img src="/img/generic.png" alt="WPO Stats Icon" />
-          {% endif %}
-          <p>
-            <a href="{{ storySource }}">{{ title }}</a>
-            <small>
-              <a href="{{url}}">Permalink</a>
-              <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{url | cgi_escape}}">Share on Twitter</a>
-            </small>
-          </p>
-          <span class="tags">
-            {% for tag in tags %}
-              <a class="tag" href="/tags/{{tag}}">#{{tag}}</a> 
-            {% endfor %}
-          </span>
-        </li>
-            </ul>
-            </section>
-            <nav role="navigation">
-                {% include "rssbar.html" %}
-            </nav>
-        </div>
-      </div>
-    </div>
-    {% include "footer.html" %}
-</body>
+---
+layout: layouts/default
+---
+<ul class="slats">
+  <li>
+    {% if img %}
+      <img src="/img/{{img.image}}" alt="{img.alt}}" />
+    {% else %}
+      <img src="/img/generic.png" alt="WPO Stats Icon" />
+    {% endif %}
+    <p>
+      <a href="{{ storySource }}">{{ title }}</a>
+      <small>
+        <a href="{{url}}">Permalink</a>
+        <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{url | cgi_escape}}">Share on Twitter</a>
+      </small>
+    </p>
+    <span class="tags">
+      {% for tag in tags %}
+        <a class="tag" href="/tags/{{tag}}">#{{tag}}</a> 
+      {% endfor %}
+    </span>
+  </li>
+</ul>
