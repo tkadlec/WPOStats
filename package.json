@@ -1,0 +1,20 @@
+{
+  "name": "wpostats",
+  "version": "1.0.0",
+  "description": "Performance can have a dramatic impact on important business metrics online, as study after study has showed. The goal of [WPO Stats](http://wpostats.com) is to become a repository of those studies so that people can find the studies most relevant to their own situation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "markdown-it-deflist": "^3.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3"
+  }
+}

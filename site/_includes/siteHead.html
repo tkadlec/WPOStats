@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if title %} {{title}} {% else %} {{site.title}}: {{site.description}} {% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="alternate" type="application/rss+xml" title="WPO Stats Case Studies" href="/feed.xml" />
+    <style type="text/css">
+        {% capture siteCSS %}{% include "styles.css" %}{% endcapture %}
+        {{ siteCSS | cssmin }}
+    </style>
+</head>
