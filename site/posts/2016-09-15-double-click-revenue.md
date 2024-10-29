@@ -10,4 +10,5 @@ tags:
  - revenue
  - ads
  - "2016"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

@@ -6,4 +6,5 @@ date:   2018-06-13 06:50:51
 tags:
  - revenue
  - "2018"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

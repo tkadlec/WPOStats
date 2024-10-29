@@ -9,4 +9,5 @@ img:
 tags:
  - conversion
  - "2014"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

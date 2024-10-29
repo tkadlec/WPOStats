@@ -8,4 +8,5 @@ tags:
  - page views
  - bounce rate
  - "2011"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

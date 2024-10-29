@@ -9,4 +9,5 @@ date:   2015-11-04 13:27:51
 tags:
  - expense
  - "2008"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

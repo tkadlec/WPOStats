@@ -13,4 +13,5 @@ tags:
  - seo
  - sessions
  - traffic
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

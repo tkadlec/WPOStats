@@ -6,4 +6,5 @@ date:   2017-03-03 09:01:51
 tags:
  - abandonment
  - "2017"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

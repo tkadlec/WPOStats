@@ -10,4 +10,5 @@ tags:
  - abandonment
  - search
  - "2019"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

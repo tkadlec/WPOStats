@@ -10,4 +10,5 @@ tags:
  - revenue
  - "2023"
  - core web vitals
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

@@ -6,4 +6,5 @@ date:   2016-07-04 09:01:51
 tags:
  - page views
  - "2016"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

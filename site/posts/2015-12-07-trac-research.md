@@ -6,4 +6,5 @@ date:   2015-12-20 11:27:51
 tags:
  - revenue
  - "2011"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

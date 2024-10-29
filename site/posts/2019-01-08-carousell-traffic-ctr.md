@@ -10,4 +10,5 @@ tags:
  - traffic
  - ads
  - "2018"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

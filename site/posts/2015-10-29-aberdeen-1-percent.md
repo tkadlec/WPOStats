@@ -12,4 +12,5 @@ tags:
  - satisfaction
  - conversion
  - "2008"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

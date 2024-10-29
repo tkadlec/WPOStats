@@ -23,8 +23,8 @@ pagination:
           <p>
             <a href="{{ post.data.storySource }}">{{ post.data.title }}</a>
             <small>
-              <a href="{{post.url}}">Permalink</a>
-              <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ post.data.title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{post.url | cgi_escape}}">Share on Twitter</a>
+              <a href="{{ post.data.permalink }}">Permalink</a>
+              <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ post.data.title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{ post.data.permalink | cgi_escape}}">Share on Twitter</a>
             </small>
           </p>
           <span class="tags">
@@ -56,6 +56,7 @@ pagination:
     {% endif %}
             </section>
             <nav role="navigation">
+            {% include "tagbar.html" %}
                 {% include "rssbar.html" %}
             </nav>
         </div>

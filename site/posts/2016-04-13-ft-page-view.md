@@ -12,4 +12,5 @@ tags:
  - engagement
  - page views
  - "2016"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

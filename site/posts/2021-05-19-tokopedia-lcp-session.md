@@ -10,4 +10,5 @@ tags:
  - session duration
  - core web vitals
  - "2021"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

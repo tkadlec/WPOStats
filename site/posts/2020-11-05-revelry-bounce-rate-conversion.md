@@ -7,4 +7,5 @@ tags:
  - bounce rate
  - conversion
  - "2020"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

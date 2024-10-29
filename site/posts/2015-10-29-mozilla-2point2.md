@@ -10,4 +10,5 @@ categories:
 tags: 
  - conversion
  - "2010"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

@@ -11,4 +11,5 @@ tags:
  - search
  - revenue
  - "2013"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

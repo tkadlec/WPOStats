@@ -6,4 +6,5 @@ date:   2020-05-27 06:50:51
 tags:
  - conversion
  - "2020"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

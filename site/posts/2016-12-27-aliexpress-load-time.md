@@ -7,4 +7,5 @@ tags:
  - orders
  - conversion
  - "2016"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

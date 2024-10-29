@@ -10,4 +10,5 @@ tags:
  - "user timing"
  - conversion
  - "2021"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

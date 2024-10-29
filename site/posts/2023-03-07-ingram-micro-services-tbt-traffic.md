@@ -9,4 +9,5 @@ tags:
  - "2021"
  - conversion
  - engagement
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

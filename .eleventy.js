@@ -27,11 +27,30 @@ module.exports = function(config) {
 		const posts = collection.getFilteredByGlob([
 			"site/posts/**/*.md",
 		]);
-		console.log("Found posts:", posts.length);
 		posts.forEach(post => {
-			console.log("Post path:", post.inputPath);
+				const date = new Date(post.data.date);
+				post.data.permalink = `/${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}/${String(date.getDate()).padStart(2, '0')}/${post.fileSlug}/`;
 		});
+
 		return posts;
+	});
+
+	config.addCollection("tagList", function(collection) {
+		const tagsSet = new Set();
+		collection.getAll().forEach(item => {
+			if (!item.data.tags) return;
+			const tags = Array.isArray(item.data.tags) ? item.data.tags : item.data.tags.split(',');
+			tags.forEach(tag => {
+				const trimmedTag = tag.trim();
+				if (trimmedTag) {
+					tagsSet.add(trimmedTag);
+					console.log('Added tag:', trimmedTag);
+				}
+			});
+		});
+		const sortedTags = Array.from(tagsSet).sort();
+		console.log('All tags:', sortedTags);
+		return sortedTags;
 	});
 
 	return {

@@ -10,4 +10,5 @@ categories:
 tags:
  - revenue
  - "2008"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

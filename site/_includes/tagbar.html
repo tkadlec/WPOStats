@@ -1,0 +1,6 @@
+<h2>Filter by tag:</h2>
+<ul>
+  {%- for tag in collections.tagList -%}
+    <li><a class="tag" href="/tags/{{ tag | slugify }}/">#{{ tag }}</a></li>
+  {%- endfor -%}
+</ul>

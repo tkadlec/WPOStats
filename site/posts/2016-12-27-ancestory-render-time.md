@@ -6,4 +6,5 @@ date:   2016-12-27 09:01:51
 tags:
  - conversion
  - "2016"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

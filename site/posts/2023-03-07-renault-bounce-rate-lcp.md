@@ -8,4 +8,5 @@ tags:
  - conversion rate
  - "2021"
  - core web vitals
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---

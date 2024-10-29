@@ -12,4 +12,5 @@ tags:
  - page views
  - expense
  - "2009"
+permalink: "/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/"
 ---
