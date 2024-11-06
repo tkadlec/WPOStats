@@ -55,7 +55,8 @@ module.exports = function(config) {
 	});
 
 	config.addCollection("searchIndex", async function(collection) {
-		return await generateSearchIndex(collection.getAll());
+		const posts = collection.getFilteredByGlob(["site/posts/**/*.md"]);
+		return await generateSearchIndex(posts);
 	});
 
 	// Add global data
