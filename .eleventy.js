@@ -1,4 +1,5 @@
 const CleanCSS = require('clean-css');
+const generateSearchIndex = require('./_11ty/generate-search-index');
 
 module.exports = function(config) {
 	config.addPassthroughCopy('site/img');
@@ -52,6 +53,13 @@ module.exports = function(config) {
 		console.log('All tags:', sortedTags);
 		return sortedTags;
 	});
+
+	config.addCollection("searchIndex", async function(collection) {
+		return await generateSearchIndex(collection.getAll());
+	});
+
+	// Add global data
+	config.addGlobalData("localhost", process.argv.includes("--serve"));
 
 	return {
 		dir: { input: 'site', output: 'dist', includes: '_includes' },

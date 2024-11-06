@@ -1,0 +1,117 @@
+<div class="search">
+  <form action="/results/" method="GET">
+    <input 
+      type="search" 
+      id="search-input" 
+      name="q" 
+      placeholder="Search case studies..."
+      aria-label="Search case studies"
+    >
+    <button type="submit" aria-label="Search">
+      Search
+    </button>
+    <div id="search-results"></div>
+  </form>
+</div>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const resultsDiv = document.getElementById('search-results');
+const form = searchInput.closest('form');
+
+// Add debounce function at the start of the script
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Show live results while typing
+searchInput.addEventListener('input', debounce(async (e) => {
+  const query = e.target.value;
+  if (query.length < 2) {
+    resultsDiv.innerHTML = '';
+    return;
+  }
+
+  try {
+    const searchUrl = window.location.hostname === 'localhost' 
+      ? `http://localhost:8787/search?q=${encodeURIComponent(query)}`
+      : `/search?q=${encodeURIComponent(query)}`;
+    
+    const response = await fetch(searchUrl, {
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    if (!response.ok) throw new Error('Search failed');
+    
+    const results = await response.json();
+    
+    if (results.length === 0) {
+      resultsDiv.innerHTML = '<div class="search-results-list"><div class="search-result-item">No results found</div></div>';
+      return;
+    }
+
+    resultsDiv.innerHTML = `
+      <ul class="search-results-list">
+        ${results.slice(0, 5).map(result => `
+          <li class="search-result-item">
+            <a href="${result.url}" class="search-result-link">
+              <h3 class="search-result-title">${result.title}</h3>
+              ${result.description ? `<p class="search-result-description">${result.description}</p>` : ''}
+            </a>
+          </li>
+        `).join('')}
+        ${results.length > 5 ? `
+          <li class="search-result-item search-result-more">
+            <a href="/results/?q=${encodeURIComponent(query)}" class="search-result-link">
+              See all ${results.length} results
+            </a>
+          </li>
+        ` : ''}
+      </ul>
+    `;
+  } catch (error) {
+    console.error('Search error:', error);
+    resultsDiv.innerHTML = '<div class="search-error">Search failed. Please try again.</div>';
+  }
+}, 100));
+
+// Optional: Handle form submission to allow both live results and full page load
+form.addEventListener('submit', (e) => {
+  const query = searchInput.value;
+  if (query.length < 2) {
+    e.preventDefault();
+    return;
+  }
+});
+
+// Add these event listeners after your existing ones
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    searchInput.value = '';
+    resultsDiv.innerHTML = '';
+  }
+});
+
+// Handle clicks outside the search form
+document.addEventListener('click', (e) => {
+  // Check if the click is outside the form
+  if (!form.contains(e.target)) {
+    searchInput.value = '';
+    resultsDiv.innerHTML = '';
+  }
+});
+
+// Optional: prevent clicks inside the results from triggering the document click handler
+resultsDiv.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+</script> 

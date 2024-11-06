@@ -1,0 +1,32 @@
+---
+layout: layouts/default
+---
+<h1>Search Results for: {{ searchParams.q }}</h1>
+
+<ul class="slats">
+  {% for result in results %}
+    <li>
+      {% if result.img %}
+        <img src="/img/{{result.img.image}}" alt="{{result.img.alt}}" />
+      {% else %}
+        <img src="/img/generic.png" alt="WPO Stats Icon" />
+      {% endif %}
+      <p>
+        <a href="{{ result.storySource }}">{{ result.title }}</a>
+        <small>
+          <a href="{{ result.permalink }}">Permalink</a>
+          <a class="share-twitter" href="https://twitter.com/intent/tweet?text={{ result.title | cgi_escape }} https%3A%2F%2Fwpostats.com%2F{{ result.permalink | cgi_escape}}">Share on Twitter</a>
+        </small>
+      </p>
+      <span class="tags">
+        {% for tag in result.tags %}
+          <a class="tag" href="/tags/{{tag}}">#{{tag}}</a> 
+        {% endfor %}
+      </span>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if results.length == 0 %}
+  <p class="no-results">No results found for "{{ searchParams.q }}"</p>
+{% endif %}

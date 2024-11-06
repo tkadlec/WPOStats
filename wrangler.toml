@@ -1,0 +1,15 @@
+name = "wpo-search"
+main = "workers/search.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+SITE_URL = "https://wpostats.com"
+
+# Add routes configuration
+routes = [
+  { pattern = "wpostats.com/search*", zone_name = "wpostats.com" }
+]
+
+# For local development
+[dev]
+port = 8787 
