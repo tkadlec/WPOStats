@@ -9,7 +9,7 @@
     "dev:eleventy": "cross-env NODE_ENV=development eleventy --serve",
     "dev:worker": "wrangler dev workers/search.js",
     "build": "cross-env NODE_ENV=production eleventy",
-    "create-post": "node scripts/create-post.js",
+    "create-post": "node scripts/create-post.js"
   },
   "keywords": [],
   "author": "",
